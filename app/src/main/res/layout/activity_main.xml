@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:androidx="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:title="Gemini Recipe Generator"
+        android:titleTextColor="@color/black"
+        android:elevation="4dp"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@drawable/rounded_card">
+
+            <!-- Input Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@drawable/rounded_card">
+
+                <!-- Title for Ingredients Input -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ingredients:"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:paddingBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/ingredientInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:padding="12dp"
+                    android:hint="Enter Ingredients"
+                    android:background="@color/white"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/generateButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Generate Recipe"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:padding="14dp" />
+            </LinearLayout>
+
+            <!-- Loading Indicator -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="20dp" />
+
+            <!-- Scrollable Response Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                android:background="@drawable/rounded_card">
+
+                <!-- Title for Recipe Response -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Generated Recipe:"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:paddingBottom="8dp" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:scrollbars="vertical"
+                    android:fadeScrollbars="false">
+
+                    <TextView
+                        android:id="@+id/responseTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Recipe will appear here..."
+                        android:textSize="15dp"
+                        android:textColor="@color/white"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:scrollbars="vertical" />
+                </ScrollView>
+
+                <!-- Save, Share & Create Recipe Buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="12dp">
+
+                    <Button
+                        android:id="@+id/saveButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Save Recipe"
+                        android:background="@color/white"
+                        android:textColor="@color/black"
+                        android:padding="12dp"
+                        android:layout_marginEnd="8dp" />
+
+                    <Button
+                        android:id="@+id/shareButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share Recipe"
+                        android:background="@color/white"
+                        android:textColor="@color/black"
+                        android:padding="12dp"
+                        android:layout_marginEnd="8dp" />
+
+                    <Button
+                        android:id="@+id/createRecipeButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Create Recipe"
+                        android:background="@color/white"
+                        android:textColor="@color/black"
+                        android:padding="12dp"
+                        android:layout_marginStart="8dp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/yourRecipesButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="View Your Recipes"
+                    android:layout_margin="16dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

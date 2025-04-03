@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:titleTextColor="@android:color/white" />
+
+    <!-- Recipe Name Input -->
+    <EditText
+        android:id="@+id/recipeNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Recipe Name"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Ingredients Input -->
+    <EditText
+        android:id="@+id/recipeIngredientsInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Ingredients"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:inputType="textMultiLine" />
+
+    <!-- Cooking Steps Input -->
+    <EditText
+        android:id="@+id/recipeStepsInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Cooking Steps"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:inputType="textMultiLine" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/saveRecipeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Recipe"
+        android:background="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="32dp"
+        android:padding="12dp" />
+
+</LinearLayout>

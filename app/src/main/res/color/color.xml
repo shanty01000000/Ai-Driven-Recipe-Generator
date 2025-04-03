@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <resources>
+
+        <color android:name="background_color">#121212</color>
+        <color android:name="white">#FFFFFF</color>
+        <color android:name="black">#000000</color>
+        <color android:name="button_color">#FF5722</color>
+    </resources>
+
+</selector>
